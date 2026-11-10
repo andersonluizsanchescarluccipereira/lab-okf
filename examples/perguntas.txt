@@ -1,0 +1,5 @@
+Qual veículo é um SUV híbrido?
+Qual tabela possui marca e modelo?
+Como calcular preço médio dos veículos?
+O que significa SUV?
+Qual a política de busca de veículos?

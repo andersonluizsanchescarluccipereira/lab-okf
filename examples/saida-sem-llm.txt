@@ -1,0 +1,32 @@
+PERGUNTA: Qual veículo é um SUV híbrido?
+
+RASTRO DE LEITURA (arquivos realmente abertos):
+  -> index.md
+  -> tables/index.md
+  -> rules/index.md
+  -> tables/vehicles.md
+  -> tables/prices.md
+  -> rules/hybrid-classification.md
+  -> rules/vehicle-search.md
+  -> metrics/average-price.md
+  -> glossary/suv.md
+
+FONTES SELECIONADAS (heurística lexical, não distância vetorial):
+  [12] tables/vehicles.md — Catálogo de veículos
+      L23: - A classificação é explicada na [regra de SUV híbrido](/rules/hybrid-classification.md).
+      L5: | vehicle_id | string | Identificador ilustrativo do veículo |
+      L8: | categoria | string | SUV, sedã, picape ou motocicleta |
+      L15: | V001 | GWM | Haval H6 | SUV | híbrida |
+      L29: Não se deve inferir motorização dos veículos marcados como "não especificada".
+  [9] rules/hybrid-classification.md — Regra de classificação de SUV híbrido
+      L3: Um veículo é classificado como **SUV híbrido** quando:
+      L5: 1. O campo `categoria` é `SUV`.
+      L12: Consulte a [tabela de veículos](/tables/vehicles.md) para verificar os campos e o registro.
+      L13: O significado dos termos está no [glossário de SUV](/glossary/suv.md) e em
+      L19: veículos nem dados oficiais de fabricantes.
+  [5] glossary/suv.md — SUV
+      L3: SUV significa Sport Utility Vehicle, usualmente traduzido como utilitário esportivo.
+      L4: É uma categoria do modelo de dados, descrita na [tabela de veículos](/tables/vehicles.md).
+
+Modo sem LLM: exibimos evidências; nenhuma resposta foi inventada.
+Para gerar com Ollama, acrescente --ollama.
